@@ -79,8 +79,9 @@ Start Styles
 */
 header .btn{background:$header-button-bg;color:$header-button-color;height:60px;}
 header .btn img{float:right;}
+header li:last-child img{float:left;}  
 header .btn div{float:left;font-size:0.75em;padding:0.625em 0 0 0.625em;}
-header li:first-child div, header li:last-child div{color:$header-button-color-alert;} 
+header li:first-child div, header li:last-child div{color:$header-button-color-alert;}
 header .inline-list, header .inline-list > .columns{margin:0;padding-left:0;padding-right:0;}
 
 
