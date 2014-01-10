@@ -1,0 +1,106 @@
+/*My Variables*/
+@font-face {
+    font-family: 'type_bold';
+    src: url('fonts/fonts/bitter-bold-webfont.eot');
+    src: url('fonts/fonts/bitter-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/fonts/bitter-bold-webfont.woff') format('woff'),
+         url('fonts/fonts/bitter-bold-webfont.ttf') format('truetype'),
+         url('fonts/fonts/bitter-bold-webfont.svg#bitterbold') format('svg');
+    font-weight: normal;
+    font-style: normal;}
+@font-face {
+    font-family: 'type_italic';
+    src: url('fonts/fonts/bitter-italic-webfont.eot');
+    src: url('fonts/fonts/bitter-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/bitter-italic-webfont.woff') format('woff'),
+         url('fonts/bitter-italic-webfont.ttf') format('truetype'),
+         url('fonts/bitter-italic-webfont.svg#bitteritalic') format('svg');
+    font-weight: normal;
+    font-style: normal;}
+@font-face {
+    font-family: 'type_regular';
+    src: url('fonts/bitter-regular-webfont.eot');
+    src: url('fonts/bitter-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/bitter-regular-webfont.woff') format('woff'),
+         url('fonts/bitter-regular-webfont.ttf') format('truetype'),
+         url('fonts/bitter-regular-webfont.svg#bitterregular') format('svg');
+    font-weight: normal;
+    font-style: normal;}
+@font-face {
+    font-family: 'font_black';
+    src: url('fonts/din-black-webfont.eot');
+    src: url('fonts/din-black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/din-black-webfont.woff') format('woff'),
+         url('fonts/din-black-webfont.ttf') format('truetype'),
+         url('fonts/din-black-webfont.svg#din_blackregular') format('svg');
+    font-weight: normal;
+    font-style: normal;}
+@font-face {
+    font-family: 'font_light';
+    src: url('fonts/din-light-webfont.eot');
+    src: url('fonts/din-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/din-light-webfont.woff') format('woff'),
+         url('fonts/din-light-webfont.ttf') format('truetype'),
+         url('fonts/din-light-webfont.svg#din_lightregular') format('svg');
+    font-weight: normal;
+    font-style: normal;}
+@font-face {
+    font-family: 'font_medium';
+    src: url('fonts/din-medium-webfont.eot');
+    src: url('fonts/din-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/din-medium-webfont.woff') format('woff'),
+         url('fonts/din-medium-webfont.ttf') format('truetype'),
+         url('fonts/din-medium-webfont.svg#dinmedium') format('svg');
+    font-weight: normal;
+    font-style: normal;}
+@font-face {
+    font-family: 'font_regular';
+    src: url('fonts/din-regular-webfont.eot');
+    src: url('fonts/din-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/din-regular-webfont.woff') format('woff'),
+         url('fonts/din-regular-webfont.ttf') format('truetype'),
+         url('fonts/din-regular-webfont.svg#dinregular') format('svg');
+    font-weight: normal;
+    font-style: normal;}
+/*
+-----------------------------------
+Variables
+-----------------------------------
+*/
+$header-button-bg: #1b5eaf !default;
+$header-button-color: #aad0ff !default;
+$header-button-bg-active: #4b91e7 !default;
+$header-button-color-active: #133762 !default;
+$header-button-color-alert: #eed31c !default;
+/*
+-----------------------------------
+Start Styles
+-----------------------------------
+*/
+header .btn{background:$header-button-bg;color:$header-button-color;height:60px;}
+header .btn img{float:right;}
+header .btn div{float:left;font-size:0.75em;padding:0.625em 0 0 0.625em;}
+header li:first-child div, header li:last-child div{color:$header-button-color-alert;} 
+header .inline-list, header .inline-list > .columns{margin:0;padding-left:0;padding-right:0;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
