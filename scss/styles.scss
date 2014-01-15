@@ -4,3 +4,37 @@
 @import
   "foundation",
   "myvariables";
+/*
+-----------------------------------
+Start Styles
+-----------------------------------
+*/
+html, body{height:100%;}
+#wrap {height: auto !important;margin: 0 auto -60px;min-height: 100%;}
+header .btn{background:$header-button-bg;color:$header-button-color;height:60px;}
+header .btn img{float:right;}
+header li:last-child img{float:left;}  
+header .btn div{float:left;font-size:0.75em;padding:0.625em 0 0 0.625em;}
+header li:first-child div, header li:last-child div{color:$header-button-color-alert;}
+header .inline-list, header .inline-list > .columns{margin:0;padding-left:0;padding-right:0;}
+nav{display:block;clear:both;}
+footer{height:3.75em;}
+footer nav{display:inline-block;clear:none;}
+/*
+--
+$primary-color: #1b5eaf !default;
+$secondary-color: #aabf40 !default;
+$alert-color: #bf4040 !default;
+$success-color: #6e810d !default;
+$warning-color: #eed31c !default;
+$info-color: #4083d4 !default;
+--
+*/
+/*
+Slide
+*/
+.orbit-next, .orbit-prev, .orbit-timer.paused, .orbit-timer, .orbit-slide-number, .orbit-progress{display:none;}
+/*
+Footer
+*/
+footer, footer a{background:$secondary-color;color:darken( $secondary-color, 25% );}

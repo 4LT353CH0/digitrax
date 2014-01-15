@@ -16,9 +16,8 @@
 	<link rel="apple-touch-icon" sizes="114x114" href="img/icons/touch-icon-iphone4.png" />
   </head>
   <body>
-  <div class="row">
+  <div id="wrap" class="row"><!--wrap-->
     <header role="banner">
-    	<nav>
         	<ul class="inline-list">
             	<li class="small-2 columns">
                         <a class="btn" href="#">
@@ -53,42 +52,76 @@
                     </a>
                 </li>
             </ul>
-        </nav>
     </header>
-	<section role="main">
-		<ul class="no-bullet small-10 columns">
-          <li class="row">
-            <article class="small-10 columns">
-            	<header class="row">
-                	<div class="small-10 columns">
-                    	<p>header content slider left</p>
-                    </div>
-                    <div class="small-2 columns">
-                    	<p>Logos</p>
-                    </div>
-                </header>
-                <div class="row">Main content slider</div>
-                <footer class="row">Footer content slider</footer>
-            </article>
-          </li>
-        </ul>
-        <div class="small-2 columns">
+	<section role="main" class="row">
+    	<div class="small-10 columns"
+            <div class="orbit-container contain-to-grid">
+                <ul class="orbit-home" data-orbit>
+                    <li data-orbit-slide="headline-1">
+                        <article>
+                            <header>header
+                            </header>
+                            <div>
+                                main
+                            </div>
+                            <footer>
+                                footer
+                            </footer>
+                        </article>
+                    </li>
+                    <li data-orbit-slide="headline-2">
+                        <article>
+                            <header>header
+                            </header>
+                            <div>
+                                main
+                            </div>
+                            <footer>
+                                footer
+                            </footer>
+                        </article>
+                    </li>
+                    <li data-orbit-slide="headline-3">
+                        <article>
+                            <header>header
+                            </header>
+                            <div>
+                                main
+                            </div>
+                            <footer>
+                                footer
+                            </footer>
+                        </article>
+                    </li>
+                    <li data-orbit-slide="headline-4">
+                        <article>
+                            <header>header
+                            </header>
+                            <div>
+                                main
+                            </div>
+                            <footer>
+                                footer
+                            </footer>
+                        </article>
+                    </li>
+                </ul>
+            </div>
         </div>
+    </section>
+   	
+    <footer class="row">
+        <a class="small-10 columns" href="#" title="Open for product categories">
+                <p class="medium-offset-5">PRODUCTS</p>
+        </a>
         <nav>
-        	<ul class="inline-list">
-            	<li>button</li>
-                <li>button</li>
-                <li>button</li>
-                <li>button</li>
+            <ul class="small-2 columns">
+                <li>Hello</li>
+                <li>Goodbye</li>
             </ul>
         </nav>
-	</section>
-	<footer>
-			<a class="small-10 columns" href="#" title="Open for product categories">
-        		<p>PRODUCTS</p>
-        	</a>
     </footer>
-</div>
+</div><!--wrap-->
 	<script type="text/javascript">
 		head.js(
 				"js/vendor/jquery-ck.js",
@@ -103,7 +136,7 @@
 				//"js/foundation/foundation.joyride-ck.js",
 				//"js/foundation/foundation.magellan-ck.js",
 				//"js/foundation/foundation.offcanvas-ck.js",
-				//"js/foundation/foundation.orbit-ck.js",
+				"js/foundation/foundation.orbit-ck.js",
 				//"js/foundation/foundation.reveal-ck.js",
 				//"js/foundation/foundation.tab-ck.js",
 				//"js/foundation/foundation.tooltip-ck.js",

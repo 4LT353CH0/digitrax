@@ -1,4 +1,8 @@
-/*My Variables*/
+/*
+-----------------------------------
+Fixings
+-----------------------------------
+*/
 @font-face {
     font-family: 'type_bold';
     src: url('fonts/fonts/bitter-bold-webfont.eot');
@@ -72,17 +76,8 @@ $header-button-color: #aad0ff !default;
 $header-button-bg-active: #4b91e7 !default;
 $header-button-color-active: #133762 !default;
 $header-button-color-alert: #eed31c !default;
-/*
------------------------------------
-Start Styles
------------------------------------
-*/
-header .btn{background:$header-button-bg;color:$header-button-color;height:60px;}
-header .btn img{float:right;}
-header li:last-child img{float:left;}  
-header .btn div{float:left;font-size:0.75em;padding:0.625em 0 0 0.625em;}
-header li:first-child div, header li:last-child div{color:$header-button-color-alert;}
-header .inline-list, header .inline-list > .columns{margin:0;padding-left:0;padding-right:0;}
+
+
 
 
 
