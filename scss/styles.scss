@@ -2,39 +2,124 @@
 @charset "UTF-8";
 
 @import
-  "foundation",
+  "foundation-v2",
   "myvariables";
 /*
 -----------------------------------
 Start Styles
 -----------------------------------
 */
-html, body{height:100%;}
-#wrap {height: auto !important;margin: 0 auto -60px;min-height: 100%;}
-header .btn{background:$header-button-bg;color:$header-button-color;height:60px;}
-header .btn img{float:right;}
-header li:last-child img{float:left;}  
-header .btn div{float:left;font-size:0.75em;padding:0.625em 0 0 0.625em;}
-header li:first-child div, header li:last-child div{color:$header-button-color-alert;}
-header .inline-list, header .inline-list > .columns{margin:0;padding-left:0;padding-right:0;}
-nav{display:block;clear:both;}
+/*
+--
+$blue: #1b5eaf !default;
+$darkblue: #00306b;
+$lightblue: #4b91e7;
+$lighterblue: #aad0ff;
+
+$grey: #444444 !default;
+$lightgrey: #d1d1d1;
+$lightergrey: #e7e9ea;
+
+$green: #aabf40 !default;
+$darkgreen: #5c6e05;
+$lightgreen: #bace52;
+
+$yellow: #eed31c !default;
+$darkyellow: #baa307;
+$lightyellow: #fded7d;
+
+$red: #bf4040 !default;
+$darkred: #991f1f;
+$lightred: #f06969;
+--
+*/
+html, body{height:100%;background:lighten($lightergrey, 5%);}
+#wrap {height: auto !important;margin: 0 auto -3.75em;min-height: 100%;}
 footer{height:3.75em;}
-footer nav{display:inline-block;clear:none;}
 /*
---
-$primary-color: #1b5eaf !default;
-$secondary-color: #aabf40 !default;
-$alert-color: #bf4040 !default;
-$success-color: #6e810d !default;
-$warning-color: #eed31c !default;
-$info-color: #4083d4 !default;
---
+------
+Header
+------
 */
-/*
+header{background:lighten($lightergrey, 5%);overflow:hidden;color:$lighterblue;
+	ul{
+		li{height:60px;background:$blue url(../img/backgrounds/bg_btn_header.png) no-repeat right top;width:16.6666%;float:left;display:inline-block;
+			a{color:$lighterblue;
+				p{float:left;padding:0.625em;}
+				img{float:right;}
+				}
+			}
+		li:last-child{float:right;background:$blue url(../img/backgrounds/bg_btn_header_reversed.png) no-repeat left top;
+			a{
+				p{float:right;}
+				img{float:left;}
+			}
+		}
+		li:nth-child(5){background:lighten($lightergrey, 5%);}
+		li:last-child, li:first-child{
+			a{color:$yellow;}
+		}
+	}
+}/*fin header*/
+
+/* 
+------
 Slide
+------
 */
-.orbit-next, .orbit-prev, .orbit-timer.paused, .orbit-timer, .orbit-slide-number, .orbit-progress{display:none;}
+.orbit-container{padding:2.625em 1.375em;
+	.orbit-prev, .orbit-next, .orbit-timer, .orbit-progress, .orbit-slide-number{display:none;}
+	.orbit-bullets {padding:20px;margin:0;
+      li {display: inline-block;width:60px;height:60px;background:$lighterblue;cursor:pointer;margin:0 20px 0 0;
+        &.active {background: $lightblue;}
+		}
+	}
+	ul.orbit-slides-container{border:1px solid $lightgrey;overflow:hidden;
+	article{display:block;padding:0 0 10px 0;background:#fff;}
+	header{/*background:$lightergrey;*/background:#fff;padding:0.8125em;border-bottom:1px solid $lightgrey;
+		a{float:right;}
+		a:last-child{margin-right: 2.1875em;}
+		}
+	.featured_product{padding:1.875em 1.25em;clear:both;
+		.description{float:left;width:69.9999%;
+			a{color:$blue;}
+			h2{font-size:2em;margin:0 0 29px 0;}
+			h3{font-size:1.25em;line-height:135%;margin:0 0 16px 0;}
+		}
+		.product{float:left;width:29.9999%;
+			a{@extend .typeitalic;color:$red;line-height:150%;
+				img.product_image{width:10em;}	
+			}
+			.readmore{margin:40px 0 0 0;display:block;font-size:0.75em;
+				.text{width:79.9999%;float:left;}
+				.arrow{float:right;margin:0 0 0 22px;}
+				}
+				
+		}	
+	}
+	footer{clear:both;padding:0 1.25em;height:auto;
+		p{margin:30px 0;}
+		.category{
+			a{color:$blue;padding:10px;background:$lighterblue url(../img/backgrounds/btn-tags.png) no-repeat right bottom;}
+		}
+		.tags{
+			a{color:$darkyellow;padding:10px;background:$lightyellow url(../img/backgrounds/btn-tags.png) no-repeat right bottom;margin:0 10px 0 0;}
+			}
+	}
+}
+}
 /*
+------
 Footer
+------
 */
-footer, footer a{background:$secondary-color;color:darken( $secondary-color, 25% );}
+footer.bottom, footer.bottom a{background:$green;color:$darkgreen;
+	.categories{font-size:1.5em;@extend .fontmedium;padding:20px 0 0 0;text-align:center;float:left;width:90%;cursor:pointer;
+		.arrow{margin:-50px auto 0 47.5%;position:relative;width:40px;}
+		}
+	.quicklink-btn{position:absolute;bottom:10px;right:21px;padding:11px 34px;background:$lightgreen;}
+	}
+	
+	
+	
+	
