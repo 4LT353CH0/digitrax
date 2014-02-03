@@ -142,7 +142,7 @@
       if (this.small()) {
         dropdown.css({
           position : 'absolute',
-          width: '95%',
+          width: '100%',
           'max-width': 'none',
           top: position.top + target.outerHeight()
         });

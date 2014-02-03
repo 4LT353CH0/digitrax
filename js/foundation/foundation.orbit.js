@@ -379,13 +379,13 @@
 
     settings: {
       animation: 'slide',
-      timer_speed: 10000,
+      timer_speed: 20000,
       pause_on_hover: true,
       resume_on_mouseout: false,
-      animation_speed: 500,
+      animation_speed: 700,
       stack_on_small: false,
-      navigation_arrows: true,
-      slide_number: true,
+      navigation_arrows: false,
+      slide_number: false,
       slide_number_text: 'of',
       container_class: 'orbit-container',
       stack_on_small_class: 'orbit-stack-on-small',
@@ -402,8 +402,8 @@
       active_slide_class: 'active',
       orbit_transition_class: 'orbit-transitioning',
       bullets: true,
-      timer: true,
-      variable_height: false,
+      timer: false,
+      variable_height: true,
       swipe: true,
       before_slide_change: noop,
       after_slide_change: noop

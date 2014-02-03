@@ -33,9 +33,8 @@ $darkred: #991f1f;
 $lightred: #f06969;
 --
 */
-html, body{height:100%;background:lighten($lightergrey, 5%);}
-#wrap {height: auto !important;margin: 0 auto -3.75em;min-height: 100%;}
-footer{height:3.75em;}
+html, body{background:lighten($lightergrey, 5%);height:100%;overflow:hidden;}
+#wrap {position:relative;height: auto !important;max-width:1024px;margin:0 auto;min-height:100%;overflow:hidden;}
 /*
 ------
 Header
@@ -43,15 +42,21 @@ Header
 */
 header{background:lighten($lightergrey, 5%);overflow:hidden;color:$lighterblue;
 	ul{
-		li{height:60px;background:$blue url(../img/backgrounds/bg_btn_header.png) no-repeat right top;width:16.6666%;float:left;display:inline-block;
-			a{color:$lighterblue;
+		li{position:relative;height:60px;background:$blue url(../img/backgrounds/bg_btn_header.png) no-repeat right top;width:16.6666%;float:left;display:inline-block;
+			&.clicked{background:$lightblue url(../img/backgrounds/bg_btn_header.png) no-repeat right top;
+			a{color:$darkblue;cursor:default;}
+			}
+			a{color:$lighterblue;position:absolute;top:0;left:0;right:0;bottom:0;
 				p{float:left;padding:0.625em;}
 				img{float:right;}
 				}
 			}
 		li:last-child{float:right;background:$blue url(../img/backgrounds/bg_btn_header_reversed.png) no-repeat left top;
+			&.clicked{background:$lightblue url(../img/backgrounds/bg_btn_header_reversed.png) no-repeat left top;
+					a{color:$darkblue;}
+					}
 			a{
-				p{float:right;}
+				p{float:right;} 
 				img{float:left;}
 			}
 		}
@@ -60,14 +65,63 @@ header{background:lighten($lightergrey, 5%);overflow:hidden;color:$lighterblue;
 			a{color:$yellow;}
 		}
 	}
+	/*@media fixes*/
+	@media screen and (max-width: 1023px){
+	    display: none;
+	  }
 }/*fin header*/
+
+.main{margin:20px 22px 0 22px;}
+.main.push{margin-right:153px;}
+/* 
+------
+Header Menu content 
+------
+*/
+.header-drop{
+	li.first{display:none;border:0;overflow:hidden;width:100%;
+		&.active{display:block;}
+		}
+	li.second{display:none;border:0;overflow:hidden;width:100%;
+		&.active{display:block;}
+		}
+	li.third{display:none;border:0;overflow:hidden;width:100%;
+		&.active{display:block;}
+		}
+	li.fourth{display:none;border:0;overflow:hidden;width:100%;
+		&.active{display:block;}
+		}
+	//News home
+	ul{
+		li{
+			article.news{height:194px;overflow:hidden;margin:0 0 10px 0;
+				a{color:$darkblue;
+				.wrap{float:left;background: $lightblue;width:90%;height:194px;display:inline-block;
+					.date{float:left;margin:20px 2% 20px 2.25%;width:24.9999%;max-width:119px;@extend .typeregular;text-align:center;background: lighten($lightblue, 10%);padding:38px 0 22px 0;border:1px $lighterblue solid;
+						.day{@extend .typebold;font-size:4.75em;}
+						.month{font-size:1.1875em;margin:25px 0 15px 0;}
+						.year{font-size:2.3125em;}
+					}
+					.single-news{float:left;margin:20px 0 20px 0;width:73.9999%;padding:20px 0;
+						h3{border-bottom:1px lighten($lightblue, 10%) solid;padding:0 0 20px 0;margin:0 0 20px 0;}
+						p{}
+					}
+				}
+				.arrow{float:left;background:none;width:10%;height:194px;
+					img{width:100%;height:100%;}
+					}
+				}
+			}
+		}
+	}
+}
 
 /* 
 ------
 Slide
 ------
 */
-.orbit-container{padding:2.625em 1.375em;
+.orbit-container{
 	.orbit-prev, .orbit-next, .orbit-timer, .orbit-progress, .orbit-slide-number{display:none;}
 	.orbit-bullets {padding:20px;margin:0;
       li {display: inline-block;width:60px;height:60px;background:$lighterblue;cursor:pointer;margin:0 20px 0 0;
@@ -81,16 +135,16 @@ Slide
 		a:last-child{margin-right: 2.1875em;}
 		}
 	.featured_product{padding:1.875em 1.25em;clear:both;
-		.description{float:left;width:69.9999%;
+		.description{float:left;width:66.9999%;max-height:220px;overflow:hidden;
 			a{color:$blue;}
-			h2{font-size:2em;margin:0 0 29px 0;}
+			h2{font-size:2em;margin:10px 0 20px 0;}
 			h3{font-size:1.25em;line-height:135%;margin:0 0 16px 0;}
 		}
-		.product{float:left;width:29.9999%;
+		.product{float:left;width:29.9999%;margin:0 0 0 3%;
 			a{@extend .typeitalic;color:$red;line-height:150%;
-				img.product_image{width:10em;}	
+				img.product_image{width:10em;float:right;}	
 			}
-			.readmore{margin:40px 0 0 0;display:block;font-size:0.75em;
+			.readmore{margin:40px 0 0 0;display:block;font-size:0.75em;float:right;clear:right;
 				.text{width:79.9999%;float:left;}
 				.arrow{float:right;margin:0 0 0 22px;}
 				}
@@ -103,22 +157,80 @@ Slide
 			a{color:$blue;padding:10px;background:$lighterblue url(../img/backgrounds/btn-tags.png) no-repeat right bottom;}
 		}
 		.tags{
-			a{color:$darkyellow;padding:10px;background:$lightyellow url(../img/backgrounds/btn-tags.png) no-repeat right bottom;margin:0 10px 0 0;}
+			a{color:$darkyellow;padding:10px;background:$lightyellow url(../img/backgrounds/btn-tags.png) no-repeat right bottom;margin:0 0 0 10px;}
 			}
 	}
 }
 }
-/*
+/*	
+------
+Category menu
+------
+*/
+
+.category-menu{position:relative;padding:0 0 10px 0;background:#fff;border:1px solid $lightgrey;
+	 
+		li{position:relative;float:left;width:145px;height:145px;background:lighten($lighterblue, 12%);text-align:center;border:1px solid lighten($lightblue, 20%);margin:10px 0 0 10px;max-height:145px;position:relative;
+			a{color:$blue;position:absolute;top:0;right:0;bottom:0;left:0;
+				h4{@extend .fontmedium;padding:10px 0 0 0;font-size:1em;}
+				img{position:absolute;bottom:0;left:0;}
+				}
+			}
+		
+	}
+.categories{font-size:1.5em;@extend .fontmedium;text-align:center;max-width:1024px;cursor:pointer;margin:0 auto;position:relative;
+		.categories-btn{float:left;width:789px;text-align:center;padding:20px 0;
+			.arrow{margin:-50px auto 0 373px;position:relative;
+				@media screen and (max-width: 1023px){
+				   display:none;
+				  }
+				}
+			
+		@media screen and (max-width: 1023px){
+		   max-width:160px;
+		  }
+		}
+		
+		.shortcuts{float:right;
+			.quicklink-btn{width:108px;background:$lightgreen;cursor:pointer;text-align:center;padding:11px 0 33px;margin:9px 22px 0 0;
+				span{margin:0 0 0 34px;}
+			}
+		}
+		@media screen and (max-width: 1023px){
+		   max-width:100%;
+		  }
+	}
+
+
+
+/*	
 ------
 Footer
 ------
 */
-footer.bottom, footer.bottom a{background:$green;color:$darkgreen;
-	.categories{font-size:1.5em;@extend .fontmedium;padding:20px 0 0 0;text-align:center;float:left;width:90%;cursor:pointer;
-		.arrow{margin:-50px auto 0 47.5%;position:relative;width:40px;}
+
+	.quicklinks{position:absolute;bottom:267px;right:22px;width:108px;height:328px;height:60px;
+		.quicklink-menu{text-align:center;margin:267px 0 0 0;
+			&.home{margin:158px 0 0 0;}
+			&.active{margin:-61px 0 0 0;}
+			li{background:$lightgreen;margin:1px 0 1px 0;width:108px;height:108px;font-size:1.25em;
+					a{display:block;padding:12px 0;height:60px;background:$lightgreen;
+						span{font-size:200%;}
+						p{@extend .fontmedium;}
+					}
+				}
+			li:first-child{background:url(../img/backgrounds/btn-home.png) no-repeat left top;
+					a{background:none;color:$yellow;padding:24px 0 0 0;
+						p{background:$red;height:50px;margin:-6px 0 0 0;padding:6px 0 0 0;}
+					}
+				}
+			}
 		}
-	.quicklink-btn{position:absolute;bottom:10px;right:21px;padding:11px 34px;background:$lightgreen;}
+		
+footer.bottom{background:$green;color:$darkgreen;position:absolute;bottom:0;left:0;right:0;height:3.75em;
+
 	}
+
 	
 	
 	
