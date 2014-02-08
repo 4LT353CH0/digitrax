@@ -49,10 +49,41 @@ head.ready(function() {
 
 		});
 	//Click header dropdown
-	$('header ul li').click(function(){
-			//btn
-			$(this).addClass('clicked', 200).siblings().removeClass('clicked');
-			//quicklinks 
+	
+		//btn
+		$('header ul li:nth-child(2)').click(function(){
+				$(this).addClass('clicked', 200).siblings().removeClass('clicked');
+				//quicklinks 
+			$(this).parents().children().find('.quicklink-menu').addClass('home', 1000);
+			$(this).parents().children().find('.main').addClass('push', 200);
+			//other fields invisible
+			$(this).parents().children().find('.category-menu').addClass('invisible');
+			$(this).parents().children().find('.orbit-container').addClass('invisible');
+			$(this).parents().children().find('.orbit-bullets-container').addClass('invisible');
+		});
+		$('header ul li:nth-child(3)').click(function(){
+				$(this).addClass('clicked', 200).siblings().removeClass('clicked');
+				//quicklinks 
+			$(this).parents().children().find('.quicklink-menu').addClass('home', 1000);
+			$(this).parents().children().find('.main').addClass('push', 200);
+			//other fields invisible
+			$(this).parents().children().find('.category-menu').addClass('invisible');
+			$(this).parents().children().find('.orbit-container').addClass('invisible');
+			$(this).parents().children().find('.orbit-bullets-container').addClass('invisible');
+		});
+		$('header ul li:nth-child(4)').click(function(){
+				$(this).addClass('clicked', 200).siblings().removeClass('clicked');
+				//quicklinks 
+			$(this).parents().children().find('.quicklink-menu').addClass('home', 1000);
+			$(this).parents().children().find('.main').addClass('push', 200);
+			//other fields invisible
+			$(this).parents().children().find('.category-menu').addClass('invisible');
+			$(this).parents().children().find('.orbit-container').addClass('invisible');
+			$(this).parents().children().find('.orbit-bullets-container').addClass('invisible');
+		});
+		$('header ul li:nth-child(6)').click(function(){
+				$(this).addClass('clicked', 200).siblings().removeClass('clicked');
+				//quicklinks 
 			$(this).parents().children().find('.quicklink-menu').addClass('home', 1000);
 			$(this).parents().children().find('.main').addClass('push', 200);
 			//other fields invisible
