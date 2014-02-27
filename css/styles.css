@@ -2783,6 +2783,71 @@ select {
     width: 80%;
     float: left;
     margin-left: -1px; } }
+.reveal-modal-bg {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: black;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 98;
+  display: none;
+  top: 0;
+  left: 0; }
+
+.reveal-modal {
+  visibility: hidden;
+  display: none;
+  position: absolute;
+  left: 50%;
+  z-index: 99;
+  height: auto;
+  margin-left: -40%;
+  width: 80%;
+  background-color: white;
+  padding: 1.25rem;
+  border: solid 1px #666666;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  top: 6.25rem; }
+  .reveal-modal .column,
+  .reveal-modal .columns {
+    min-width: 0; }
+  .reveal-modal > :first-child {
+    margin-top: 0; }
+  .reveal-modal > :last-child {
+    margin-bottom: 0; }
+  .reveal-modal .close-reveal-modal {
+    font-size: 1.375rem;
+    line-height: 1;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.6875rem;
+    color: #aaaaaa;
+    font-weight: bold;
+    cursor: pointer; }
+
+@media only screen and (min-width: 40.063em) {
+  .reveal-modal {
+    padding: 1.875rem;
+    top: 6.25rem; }
+    .reveal-modal.tiny {
+      margin-left: -15%;
+      width: 30%; }
+    .reveal-modal.small {
+      margin-left: -20%;
+      width: 40%; }
+    .reveal-modal.medium {
+      margin-left: -30%;
+      width: 60%; }
+    .reveal-modal.large {
+      margin-left: -35%;
+      width: 70%; }
+    .reveal-modal.xlarge {
+      margin-left: -47.5%;
+      width: 95%; } }
+@media print {
+  .reveal-modal {
+    background: #fff !important; } }
 @media only screen and (max-width: 40em) {
   .f-dropdown {
     max-width: 100%;
@@ -2933,6 +2998,9 @@ Fixings
 Variables
 -----------------------------------
 */
+.icon {
+  font-family: 'foundation-icons'; }
+
 .fontlight {
   font-family: 'font_light'; }
 
@@ -2945,13 +3013,13 @@ Variables
 .fontblack {
   font-family: 'font_black'; }
 
-.typeregular, .header-drop ul li article.news a .wrap .date {
+.typeregular, .header-drop ul li article.news a .wrap .date, .support article .main .content.contact_information .column p a, input, select, textarea, table.tradeshows td {
   font-family: 'type_regular'; }
 
 .typebold, .header-drop ul li article.news a .wrap .date .day {
   font-family: 'type_bold'; }
 
-.typeitalic, .orbit-container ul.orbit-slides-container .featured_product .product a {
+.typeitalic, .orbit-container ul.orbit-slides-container .featured_product .product a, table.tradeshows a {
   font-family: 'type_italic'; }
 
 ul {
@@ -3445,6 +3513,29 @@ Arrow sprites
     max-width: 80px; }
 
 /*
+general button
+*/
+.button {
+  line-height: 1em;
+  font-size: 1em;
+  margin: 10px 0;
+  display: inline-block; }
+  .button .icon {
+    padding: 10px 12px;
+    background-color: #d1d1d1; }
+  .button .info {
+    padding: 8px 10px;
+    margin: 0 10px 0 2px;
+    background-color: #d1d1d1; }
+
+.button.red .icon {
+  background-color: #f7afaf;
+  color: #991f1f; }
+.button.red .info {
+  background-color: #f7afaf;
+  color: #991f1f; }
+
+/*
 -----------------------------------
 Start Styles
 -----------------------------------
@@ -3533,7 +3624,14 @@ header {
     header ul li:last-child a img {
       float: left; }
   header ul li:nth-child(5) {
-    background: #f5f5f6; }
+    background: #bf4040;
+    padding: 0;
+    margin-top: -60px; }
+    header ul li:nth-child(5).pull {
+      margin-top: -20px; }
+    header ul li:nth-child(5) a {
+      color: #eed31c;
+      margin: 20px 0 0 50px; }
   header ul li:last-child a, header ul li:first-child a {
     color: #eed31c; }
   @media screen and (max-width: 1023px) {
@@ -3724,7 +3822,7 @@ Slide
       padding: 10px;
       background: #aad0ff url(../img/backgrounds/btn-tags.png) no-repeat right bottom; }
     .orbit-container ul.orbit-slides-container footer .tags a {
-      color: #baa307;
+      color: #897805;
       padding: 10px;
       background: #fded7d url(../img/backgrounds/btn-tags.png) no-repeat right bottom;
       margin: 0 0 0 10px; }
@@ -3859,12 +3957,8 @@ footer.bottom {
 Technical support
 ------
 */
-.orbit-container {
-  display: none; }
-
-.header-drop li.third {
-  display: block; }
-
+.support h4, .support h5, .support h6 {
+  font-size: 1.2em; }
 .support article {
   background: #fff;
   min-height: 450px;
@@ -3914,20 +4008,33 @@ Technical support
     width: 100%; }
   .support article .main dl.inner {
     width: 100%; }
-    .support article .main dl.inner dd a {
-      width: 120px;
-      height: 40px;
-      margin-left: 5px;
-      padding: 10px 0 0 20px;
-      background: #fded7d url(../img/backgrounds/btn-tabs.png) no-repeat left bottom;
-      color: #897805; }
-    .support article .main dl.inner dd.active a {
-      background: #eed31c; }
+    .support article .main dl.inner dd {
+      width: 25%;
+      display: inline-block; }
+      .support article .main dl.inner dd a {
+        width: 99%;
+        height: auto;
+        min-height: 50px;
+        margin-left: 1%;
+        padding: 5px 0 5px 20px;
+        background: #fded7d url(../img/backgrounds/btn-tabs.png) no-repeat left bottom;
+        color: #897805; }
+      .support article .main dl.inner dd.active a {
+        background: #eed31c;
+        cursor: auto; }
+  .support article .main ul.faq li {
+    width: 90%;
+    margin: 0 5%; }
+    .support article .main ul.faq li .button {
+      display: block;
+      margin: 25px 0 0 0; }
   .support article .main .content {
     position: relative;
     height: 340px; }
     .support article .main .content .main {
       margin: 0 20px; }
+      .support article .main .content .main h4, .support article .main .content .main h5 {
+        color: #444444; }
       .support article .main .content .main .body table {
         width: 100%;
         margin: 10px 0 20px 0; }
@@ -3958,9 +4065,9 @@ Technical support
             display: inline-block;
             margin: 0 0 0 2px; }
       .support article .main .content .main .body ul:last-child li:last-child a {
-        color: #6f1616; }
+        color: #991f1f; }
       .support article .main .content .main .body ul:last-child li:last-child span {
-        background: #f06969; }
+        background: #f9c6c6; }
     .support article .main .content .footer {
       position: absolute;
       bottom: 10px; }
@@ -3971,4 +4078,202 @@ Technical support
         margin: 0 5px 0 0; }
         .support article .main .content .footer a .icon {
           margin: 0 10px 0 5px;
-          font-size: 1.5em; }
+          font-size: 1em; }
+
+.support article .ware .contact-details {
+  background-color: #f5f5f6;
+  width: 90%;
+  padding: 8px 1%;
+  margin: 0 0 3px 0; }
+  .support article .ware .contact-details h4 {
+    margin: 0 0 5px 0; }
+    .support article .ware .contact-details h4 a {
+      color: #919191;
+      margin: 0 0 5px 0; }
+  .support article .ware .contact-details h5 {
+    font-size: 0.85em;
+    margin: 0 0 5px 0; }
+.support article .ware .footer a:nth-child(4) {
+  clear: both;
+  display: inline-block;
+  margin-top: 15px;
+  margin-bottom: -10px; }
+
+.support article .main .content.contact_information {
+  height: 389px;
+  position: relative; }
+  .support article .main .content.contact_information .column {
+    margin: 0 0 1% 0;
+    float: left; }
+    .support article .main .content.contact_information .column h4 {
+      padding: 0 0 15px 0;
+      font-size: 1em; }
+    .support article .main .content.contact_information .column h5 {
+      padding: 0;
+      font-size: 1em; }
+    .support article .main .content.contact_information .column p a {
+      color: #1b5eaf;
+      background: #ddecff;
+      font-size: 0.85em; }
+  .support article .main .content.contact_information .column:nth-child(1) {
+    width: 28.45555%; }
+    .support article .main .content.contact_information .column:nth-child(1) .vcard {
+      background: #e7e9ea;
+      margin: 5px 0 0 0;
+      padding: 25px 10px;
+      color: #444444;
+      font-size: 0.85em; }
+      .support article .main .content.contact_information .column:nth-child(1) .vcard a {
+        color: #444444; }
+      .support article .main .content.contact_information .column:nth-child(1) .vcard .url, .support article .main .content.contact_information .column:nth-child(1) .vcard .email {
+        padding: 5px; }
+      .support article .main .content.contact_information .column:nth-child(1) .vcard .adr {
+        padding: 10px 0 0 0; }
+      .support article .main .content.contact_information .column:nth-child(1) .vcard .url, .support article .main .content.contact_information .column:nth-child(1) .vcard .email, .support article .main .content.contact_information .column:nth-child(1) .vcard .street-address, .support article .main .content.contact_information .column:nth-child(1) .vcard .locality, .support article .main .content.contact_information .column:nth-child(1) .vcard .country-name, .support article .main .content.contact_information .column:nth-child(1) .vcard .tel {
+        display: block;
+        padding: 2px 0; }
+  .support article .main .content.contact_information .column:nth-child(2) {
+    width: 71.45555%; }
+    .support article .main .content.contact_information .column:nth-child(2) .manager {
+      float: left;
+      width: 48.9999%;
+      margin: 5px 1% 0 0;
+      padding: 5px;
+      background: #ddecff; }
+  .support article .main .content.contact_information .footer {
+    position: absolute;
+    bottom: 10px; }
+    .support article .main .content.contact_information .footer a {
+      color: #897805;
+      padding: 10px;
+      background: #fded7d;
+      margin: 0 5px 0 0; }
+      .support article .main .content.contact_information .footer a .icon {
+        margin: 0 10px 0 5px;
+        font-size: 1em; }
+  .support article .main .content.contact_information .footer a:nth-child(4) {
+    clear: both;
+    display: inline-block;
+    margin-top: 15px;
+    margin-bottom: -10px; }
+
+.reveal-modal {
+  background: #e7e9ea;
+  top: 25px;
+  bottom: 25px;
+  color: #5c6e05;
+  padding: 0; }
+  .reveal-modal h1, .reveal-modal h2, .reveal-modal h3, .reveal-modal h4, .reveal-modal h5, .reveal-modal h6 {
+    font-size: 1.2em;
+    line-height: 1.2em;
+    margin: 20px 0; }
+  .reveal-modal .icon {
+    padding: 10px 12px;
+    color: #bf4040;
+    background: #f7afaf; }
+
+/*
+Query form
+*/
+form {
+  width: 96%; }
+
+fieldset {
+  background: #ddecff;
+  border: 1px solid #aad0ff;
+  float: left;
+  width: 48%;
+  margin: 0 0.9999%;
+  min-height: 230px; }
+
+label {
+  cursor: pointer; }
+
+textarea {
+  min-height: 120px; }
+
+/*Form checkboxes etc.. custom styling*/
+input, select, textarea {
+  margin: 0;
+  padding: 0;
+  font-size: 0.85em;
+  outline: none;
+  font-family: inherit;
+  box-sizing: border-box; }
+
+input[type="radio"],
+input[type="checkbox"] {
+  display: none; }
+
+input[type="radio"] + label:before {
+  border-radius: 16px;
+  content: "";
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  margin: 10px 10px -10px 0;
+  background: #79acea; }
+
+input[type="radio"]:checked + label:before {
+  background-color: #1b5eaf;
+  background-image: url("img/pictos/check.png");
+  content: ""; }
+  input[type="radio"]:checked + label:before span {
+    display: inline-block; }
+
+input[type="text"], input[type="email"], input[type="tel"], textarea {
+  background: #f6faff;
+  border: none;
+  padding: 10px;
+  margin: 5px 0;
+  width: 70%;
+  float: right;
+  clear: right; }
+
+fieldset:nth-child(2) label, fieldset:nth-child(4) label {
+  float: left;
+  clear: left;
+  margin: 15px 0; }
+
+fieldset:nth-child(1) label, fieldset:nth-child(3) label {
+  width: 100%;
+  float: left;
+  clear: left;
+  margin-bottom: 5px;
+  padding-bottom: 5px; }
+
+input[type="submit"] {
+  background: #ddecff;
+  border: 1px solid #aad0ff;
+  float: right;
+  margin: 10px 0.9999% 0 0;
+  padding: 15px; }
+
+/*End custom checkboxes*/
+table.tradeshows {
+  padding: 15px 5px;
+  margin: 10px 0;
+  font-size: 0.9em;
+  width: 100%; }
+  table.tradeshows a {
+    color: #113a6d; }
+  table.tradeshows th {
+    width: 26.9998%;
+    padding: 0;
+    color: #2276db;
+    padding: 10px 0.4998%; }
+  table.tradeshows th:first-child {
+    width: 14%;
+    padding: 10px 0.4998% 10px 2%; }
+  table.tradeshows td {
+    width: 26.9998%;
+    background: #ddecff;
+    padding: 10px 0.4998%; }
+    table.tradeshows td span {
+      display: block;
+      color: #4d91e3;
+      font-size: 0.75em; }
+  table.tradeshows td:first-child {
+    color: #bf4040;
+    width: 14%;
+    padding: 10px 0.4998% 10px 2%; }

@@ -32,7 +32,7 @@
                 </li>
             	<li>
                 	<a class="btn" href="#" title="Contact Digi-Trax">
-                    	<p>CONTACT</p>
+                    	<p>QUERY</p>
 					</a>
                 </li>
             	<li>
@@ -40,7 +40,11 @@
                     	<p>TECHNICAL SUPPORT</p>
                     </a>
                 </li>
-                <li></li>
+                <li class="visible">
+                	<a href="home.html" title="Home">
+                    	<p>HOME</p>
+                    </a>
+                </li>
             	<li>
                 	<a class="btn" href="#" title="View my profile | USER ">
                     	<p>PROFILE | USER</p> 
@@ -94,32 +98,125 @@
                     </li>
                   	<li class="second contact">
                     	<article>
-                        	CONTACT FORM
+                        	<form>
+                            	<fieldset>
+                                	<legend>
+                                    	QUESTION
+                                    </legend>
+                                   <div><input type="radio" name="question" value="General" id="question-1" checked><label for="question-1"> General</label></div>
+                                   <div><input type="radio" name="question" value="Product" id="question-2"><label for="question-2"> Product</label></div>
+                                   <div><input type="radio" name="question" value="Delivery" id="question-3"><label for="question-3"> Delivery</label></div>
+                                   <div><input type="radio" name="question" value="service" id="question-4"><label for="question-4"> Repair &amp; Service</label>	</div>
+                                </fieldset>
+                                <fieldset>
+                                <legend>
+                                    	CONTACT DETAILS
+                                    </legend>
+										<label for="name">Name:</label> <input type="text" value="Type your name" name="name">
+										<label for="designation">Designation: </label> <input type="text" name="designation" value="Further details, client details">
+										<label for="email">E-mail:</label> <input type="email" name="email" value="Type your email">
+										<label for="tel">Phone:</label> <input type="tel" name="tel" value="Your phone number">
+                                </fieldset>
+								<fieldset>
+                                        <legend>
+                                            QUERY
+										</legend>
+									<input name="query" value="forclient" type="radio" id="query-1" checked><label for="query-1"> For client</label>
+									<input name="query" value="personal" type="radio" id="query-2"><label for="query-2"> Personal</label>
+								</fieldset>
+                                <fieldset>
+                                	<legend>
+                                    	MESSAGE
+                                    </legend>
+										<label for="subject">Subject:</label> <input type="text" name="subject" value="Your subject">
+										<label for="message">Message:</label> <textarea name="message" value="Type you message"></textarea>
+								</fieldset>
+								<input type="submit" value="Submit the query">
+                            </form>
                     	</article>
                     </li>
                   	<li class="third support">
 						<article>
-                           <!-- <header>
-                                <a href="http://www.sunquestinfo.com/" title="Sunquest Information systems" target="_blank">
-                            		<img src="img/logos/sunquest.jpg" alt="Sunquest logo">
-                                </a>
-                            	<a href="http://digi-trax.net/" title="Digi-trax Corporation" target="_blank">
-                            		<img src="img/logos/digitrax-logotype.jpg" alt="digitrax logo">
-                                </a>
-                                <div class="clearfix"></div>
-                            </header>-->
                             <div class="main">
                             	<dl class="tabs vertical" data-tab>
                                     <dd><a href="#panel1a"><span>Contact Information</span><span><img src="img/backgrounds/arrow-tabs-active.png" alt="arrow"><img src="img/backgrounds/arrow-tabs.png" alt="arrow"></span></a></dd>
                                     <dd class="active"><a href="#panel2a"><span>Technical support &amp; videos</span><span><img src="img/backgrounds/arrow-tabs-active.png" alt="arrow"><img src="img/backgrounds/arrow-tabs.png" alt="arrow"></span></a></dd>
-                                    <dd><a href="#panel3a"><span>About us</span><span><img src="img/backgrounds/arrow-tabs-active.png" alt="arrow"><img src="img/backgrounds/arrow-tabs.png" alt="arrow"></span></a></dd>
                                     <dd><a href="#panel4a"><span>Current trade show schedule</span><span><img src="img/backgrounds/arrow-tabs-active.png" alt="arrow"><img src="img/backgrounds/arrow-tabs.png" alt="arrow"></span></a></dd>
-                                    <dd><a href="#panel5a"><span>Return policy</span><span><img src="img/backgrounds/arrow-tabs-active.png" alt="arrow"><img src="img/backgrounds/arrow-tabs.png" alt="arrow"></span></a></dd>
                                     <dd><a href="#panel6a"><span>FAQ</span><span><img src="img/backgrounds/arrow-tabs-active.png" alt="arrow"><img src="img/backgrounds/arrow-tabs.png" alt="arrow"></span></a></dd>
                                 </dl>
                                 <div class="tabs-content vertical">
-									<div class="content" id="panel1a"> 
-										content
+									<div class="content contact_information" id="panel1a"> 
+										<div class="column">
+                                        	<h4>SALES &amp; SUPPORT</h4>
+                                            <div id="hcard-Digi-Trax-Corporation" class="vcard">
+                                                <a class="url fn n" href="http://digi-trax.com" title="digi-trax.com home" target="_blank">  
+                                                	<span class="fi-link"></span> <span class="given-name">Digi-Trax Corporation</span>
+                                                </a>
+												<a class="email" href="mailto:Info@Digi-Trax.com"><span class="fi-mail"></span> <span>Info@Digi-Trax.com</span></a>
+												<div class="adr"><div class="street-address"><span class="fi-address-book"></span> <span>650 Heathrow Drive</span></div><span class="locality">Lincolnshire</span><span class="region">Illinois</span> <span class="postal-code">60069</span>
+                                                  <span class="country-name">United states</span>
+                                             	</div>
+                                             	<div class="tel"><span class="fi-telephone-accessible"></span> <span>847-613-2100</span></div>
+                                           
+                                            </div><!--end address-->
+                                        </div>
+                                        <div class="column">
+                                        	<h4>SALES MANAGERS</h4>
+                                        	<div class="manager">
+                                                <h5><span class="fi-torso-female"></span> Melissa Freas</h5>
+                                                <p><a href="mailto:mfreas@digi-trax.com"><span class="fi-mail"></span> <span>mfreas@digi-trax.com</span></a></p>
+                                                
+                                                <p><span class="fi-telephone"></span> <span>224-360-2732</span></p>
+                                            </div>
+                                            
+                                            <div class="manager">
+                                                <h5><span class="fi-torso"></span> Dave Ugalde</h5>
+                                                <p><a href="mailto:dugalde@digi-trax.com"><span class="fi-mail"></span> <span>dugalde@digi-trax.com</span></a></p>
+                                                
+                                                <p><span class="fi-telephone"></span> <span>847-613-2118</span></p>
+                                            </div>
+                                            
+                                            <div class="manager">
+                                                <h5><span class="fi-torso"></span> Scot Brick</h5>
+                                                <p><a href="mailto:sbrick@digi-trax.com"><span class="fi-mail"></span> <span>sbrick@digi-trax.com</span></a></p>
+                                                
+                                                <p><span class="fi-telephone"></span> <span>818-640-8424</span></p>
+                                            </div>
+                                            
+                                            <div class="manager">
+                                                <h5><span class="fi-torso"></span> Tim Grantz</h5>
+                                                <p><a href="mailto:tgrantz@digi-trax.com"><span class="fi-mail"></span> <span>tgrantz@digi-trax.com</span></a></p>
+                                                
+                                                <p><span class="fi-telephone"></span> <span>314-330-0387</span></p>
+                                            </div>
+                                            
+                                            <div class="manager">
+                                                <h5><span class="fi-torso"></span> Mike Brophy</h5>
+                                                <p><a href="mailto:mbrophy@digi-trax.com"><span class="fi-mail"></span> <span>mbrophy@digi-trax.com</span></a></p>
+                                                
+                                                <p><span class="fi-telephone"></span> <span>781-738-2671</span></p>
+                                            </div>
+                                            
+										</div><!--column-->
+                                        <!--modals-->
+										<div id="modal-returnpolicy" class="reveal-modal xx-large" data-reveal="">
+                                            <div class="close-reveal-modal icon">&#xf217;</div>
+                                            <iframe src="http://digi-trax.com/returnpolicy.htm" style="overflow:scroll; width:100%; height:100%; margin:0; padding:0; border:none;"></iframe>
+                                        </div>
+                                        <div id="modal-tradeshow" class="reveal-modal xx-large" data-reveal="">
+                                        <div class="close-reveal-modal icon">&#xf217;</div>
+                                        <iframe src="http://digi-trax.com/tradeshowschedule.htm" style="overflow:scroll; width:100%; height:100%; margin:0; padding:0; border:none;"></iframe>
+                                        </div>
+                                        <div id="modal-maps" class="reveal-modal xx-large" data-reveal="">
+                                        <div class="close-reveal-modal icon">&#xf217;</div>
+                                        <iframe src="http://digi-trax.com/contact.htm#maps" style="overflow:scroll; width:100%; height:100%; margin:0; padding:0; border:none;"></iframe>
+                                        </div>
+                                        <div id="modal-about" class="reveal-modal xx-large" data-reveal="">
+                                        <div class="close-reveal-modal icon">&#xf217;</div>
+                                        <iframe src="http://digi-trax.com/about.htm" style="overflow:scroll; width:100%; height:100%; margin:0; padding:0; border:none;"></iframe>
+                                        </div>
+                                        <!--end modals-->
+                                        <p class="footer"><a data-reveal-id="modal-returnpolicy" href="http://digi-trax.com/returnpolicy.htm" title="Our Return Policy" target="_blank"><span class="fi-loop"></span> <span>Return Policy</span></a><a data-reveal-id="modal-tradeshow" href="http://digi-trax.com/tradeshowschedule.htm" title="Trade Show Schedule" target="_blank"><span class="fi-megaphone"></span> <span>Trade Show Schedule</span></a><a data-reveal-id="modal-maps" href="http://digi-trax.com/contact.htm#maps" title="Directions & Maps to Digi-Trax" target="_blank"><span class="fi-map"></span> <span>Directions & Maps</span></a><a data-reveal-id="modal-about" href="http://digi-trax.com/about.htm" title="About Digi-Trax Corporation" target="_blank"><span class="fi-info"></span> <span>About Digi-Trax Corporation</span></a></p> 
 									</div><!--outer tab content-->
                                     <div class="content active" id="panel2a">
                                     	<dl class="tabs inner" data-tab>
@@ -176,9 +273,9 @@
                                                         </table>
                                                     </div>
                                                 </div>
-                                                <p class="footer"><a href="http://digi-trax.net/pdf" target="_blank" title="Browse out data-sheets"><span><span class="fi-page-pdf icon"></span>Product data sheets & brochures</span></a><a href="http://download.digi-trax.com" target="_blank" title="Download our LSS"><span class="fi-download icon"></span><span>Lifecycle Software Support (LSS)</span></a></p> 
+                                               <p class="footer"><a data-reveal-id="modal-datasheets" href="http://digi-trax.net/pdf" target="_blank" title="Browse out data-sheets"><span><span class="fi-page-pdf icon"></span>Product data sheets & brochures</span></a><a data-reveal-id="modal-lss" href="http://download.digi-trax.com" target="_blank" title="Download our LSS"><span class="fi-download icon"></span><span>Lifecycle Software Support (LSS)</span></a></p> 
                                             </div> 
-                                            <div class="content active" id="panel2-2"> 
+                                            <div class="content video active" id="panel2-2"> 
                                             	<div class="main">
                                                 	<div class="body">
                                                     	<ul>
@@ -198,23 +295,169 @@
                                                         </ul>
                                                     </div>
                                              	</div>
-                                                <p class="footer"><a href="http://digi-trax.net/pdf" target="_blank" title="Browse out data-sheets"><span><span class="fi-page-pdf icon"></span>Product data sheets & brochures</span></a><a href="http://download.digi-trax.com" target="_blank" title="Download our LSS"><span class="fi-download icon"></span><span>Lifecycle Software Support (LSS)</span></a></p> 
+                                                <!--modals-->
+										<div id="modal-datasheets" class="reveal-modal xx-large" data-reveal="">
+                                            <div class="close-reveal-modal icon">&#xf217;</div>
+                                            <iframe src="http://digi-trax.net/pdf" style="overflow:scroll; width:100%; height:100%; margin:0; padding:0; border:none;"></iframe>
+                                        </div>
+                                        <div id="modal-lss" class="reveal-modal xx-large" data-reveal="">
+                                        <div class="close-reveal-modal icon">&#xf217;</div>
+                                        <iframe src="http://download.digi-trax.com" style="overflow:scroll; width:100%; height:100%; margin:0; padding:0; border:none;"></iframe>
+                                        </div>
+                                        <!--end modals-->
+                                                <p class="footer"><a data-reveal-id="modal-datasheets" href="http://digi-trax.net/pdf" target="_blank" title="Browse out data-sheets"><span><span class="fi-page-pdf icon"></span>Product data sheets & brochures</span></a><a data-reveal-id="modal-lss" href="http://download.digi-trax.com" target="_blank" title="Download our LSS"><span class="fi-download icon"></span><span>Lifecycle Software Support (LSS)</span></a></p> 
                                             </div> 
-                                            <div class="content" id="panel2-3"> 
-                                                <h4>Hardware support WYSIWYG PANEL</h4> 
-                                                 <p class="footer"><a href="http://digi-trax.net/pdf" target="_blank" title="Browse out data-sheets"><span><span class="fi-page-pdf icon"></span>Product data sheets & brochures</span></a><a href="http://download.digi-trax.com" target="_blank" title="Download our LSS"><span class="fi-download icon"></span><span>Lifecycle Software Support (LSS)</span></a></p>  
-                                            </div> 
-                                            <div class="content" id="panel2-4"> 
-												<h4>Software support WYSIWYG PANEL</h4>
-                                              	 <p class="footer"><a href="http://digi-trax.net/pdf" target="_blank" title="Browse out data-sheets"><span><span class="fi-page-pdf icon"></span>Product data sheets & brochures</span></a><a href="http://download.digi-trax.com" target="_blank" title="Download our LSS"><span class="fi-download icon"></span><span>Lifecycle Software Support (LSS)</span></a></p>  
-                                            </div> 
+                                            <div class="content ware" id="panel2-3"> 
+												<div class="main">
+                                                <div class="contact-details">
+                                                	<h4 class="title"><a href="http://digi-trax.com/techsupport.htm" target="_blank" title="Service &amp; repairs	">SERVICE &amp; REPAIRS</a></h4>
+                                                    <a class="button" href="mailto:repairs@digi-trax.com" title="repairs@digi-trax.com"><span class="fi-mail icon"></span><span class="info">repairs@digi-trax.com</span></a>
+                                                            <a class="button" href="#" title="Fax"><span class="fi-print icon"></span><span class="info">847-465-9055</span></a>
+                                                         
+                                                </div>
+                                                <div class="contact-details">
+                                                	<h5 class="title"><a href="http://digi-trax.com/techsupport.htm" target="_blank" title="Director of Hardware Tech Support">DIRECTOR OF HARDWARE TECH SUPPORT - Augie Centeno</a></h5>
+                                                        <a class="button" href="#" title="847-613-2109"><span class="fi-telephone icon"></span><span class="info">847-613-2109</span></a>
+                                                        
+                                                </div>
+												<div class="contact-details">
+                                                	<h5 class="title"><a href="http://digi-trax.com/techsupport.htm" title="Tech support" target="_blank">TECHNICAL SUPPORT ENGINEER - Sherwin Nolledo</a></h5>
+                                                    <a class="button" href="#" title="847-613-2108"><span class="fi-telephone icon"></span><span class="info">847-613-2108</span></a><a class="button" href="mailto:snolledo@digi-trax.com"><span class="fi-mail icon"></span><span class="info">snolledo@digi-trax.com</span></a>
+                                                    
+                                                </div>
+                                                    <div id="modal-videos" class="reveal-modal xx-large" data-reveal="">
+                                                        <div class="close-reveal-modal icon">&#xf217;</div>
+                                                        <iframe src="http://digi-trax.com/video/index.htm" style="overflow:scroll; width:100%; height:100%; margin:0; padding:0; border:none;"></iframe>
+                                                    </div>
+                                                    <div id="modal-drivers" class="reveal-modal xx-large" data-reveal="">
+                                                        <div class="close-reveal-modal icon">&#xf217;</div>
+                                                        <iframe src="http://digi-trax.com/drivers/" style="overflow:scroll; width:100%; height:100%; margin:0; padding:0; border:none;"></iframe>
+                                                    </div>
+                                                    <div id="modal-roundtrip" class="reveal-modal xx-large" data-reveal="">
+                                                        <div class="close-reveal-modal icon">&#xf217;</div>
+                                                        <iframe src="http://digi-trax.com/rndtrip.htm" style="overflow:scroll; width:100%; height:100%; margin:0; padding:0; border:none;"></iframe>
+                                                    </div>
+                                                    <div id="modal-repairs" class="reveal-modal xx-large" data-reveal="">
+														<div class="close-reveal-modal icon">&#xf217;</div>
+                                                        <iframe src="http://digi-trax.com/techsupport.htm" style="overflow:scroll; width:100%; height:100%; margin:0; padding:0; border:none;"></iframe>
+                                                    </div>
+        											</div><!--main-->
+                                                 <p class="footer"><a data-reveal-id="modal-datasheets" href="http://digi-trax.net/pdf" target="_blank" title="Browse out data-sheets"><span><span class="fi-page-pdf icon"></span>Product data sheets & brochures</span></a><a data-reveal-id="modal-videos" href="http://digi-trax.com/video/index.htm" target="_blank" title="Hardware videos"><span class="fi-video icon"></span><span>Hardware Videos</span></a><a data-reveal-id="modal-drivers" href="http://digi-trax.com/drivers/" target="_blank" title="Hardware videos"><span class="fi-download icon"></span><span>Drivers &amp; Downloads</span></a><a data-reveal-id="modal-roundtrip" href="http://digi-trax.com/rndtrip.htm" target="_blank" title="Roundtrip loaner printer"><span class="fi-info"></span> Roundtrip loaner printer</a><a data-reveal-id="modal-repairs" href="http://digi-trax.com/techsupport.htm" title="Steps to getting your Digi-Trax printer repaired"><span class="fi-alert"></span> Steps to getting your Digi-Trax printer repaired</a></p>  
+                                            </div> <!--content-->
+                                            <div class="content ware" id="panel2-4"> 
+												<div class="main">
+                                                    <div class="contact-details">
+                                                	<h4 class="title"><a href="http://digi-trax.com/softsupp.htm" target="_blank" title="Service &amp; repairs	">APPLICATION SUPPORT</a></h4>
+                                                    <a class="button" target="_blank" href="http://digi-trax.com/softsupp.htm" title="repairs@digi-trax.com"><span class=" fi-link icon"></span><span class="info">HemaTrax®, HemaTrax®-CT & all other Digi-Trax software products:</span></a>
+                                                         
+                                                </div>
+                  
+												<div class="contact-details">
+                                                	<h5 class="title"><a href="http://digi-trax.com/techsupport.htm" title="Tech support" target="_blank"> SOFTWARE SUPPORT ENGINEER - Henry Cagadas</a></h5>
+                                                    <a class="button" href="mailto:hcagadas@digi-trax.com"><span class="fi-mail icon"></span><span class="info">hcagadas@digi-trax.com</span></a>
+                                                    <a class="button" href="#" title="847-613-2109"><span class="fi-telephone icon"></span><span class="info">847-613-2114</span></a>
+                                                        <a class="button" href="#" title="847-465-9055"><span class="fi-print icon"></span><span class="info">847-613-2114</span></a>
+                                                        
+                                                    
+                                                </div>
+                                                    <div id="modal-manuals" class="reveal-modal xx-large" data-reveal="">
+														<div class="close-reveal-modal icon">&#xf217;</div>
+                                                        <iframe src="http://digi-trax.com/manuals.htm" style="overflow:scroll; width:100%; height:100%; margin:0; padding:0; border:none;"></iframe>
+                                                    </div>
+                                                    <div id="modal-specialoffer" class="reveal-modal xx-large" data-reveal="">
+														<div class="close-reveal-modal icon">&#xf217;</div>
+                                                        <iframe src="http://digi-trax.com/techsupport.htm" style="overflow:scroll; width:100%; height:100%; margin:0; padding:0; border:none;"></iframe>
+                                                    </div>
+                                                    <div id="modal-sofrwarealert" class="reveal-modal xx-large" data-reveal="">
+														<div class="close-reveal-modal icon">&#xf217;</div>
+                                                        <iframe src="http://digi-trax.com/SoftwareAlert.htm" style="overflow:scroll; width:100%; height:100%; margin:0; padding:0; border:none;"></iframe>
+                                                    </div>
+                                                    <div id="modal-repairs" class="reveal-modal xx-large" data-reveal="">
+														<div class="close-reveal-modal icon">&#xf217;</div>
+                                                        <iframe src="http://digi-trax.com/techsupport.htm" style="overflow:scroll; width:100%; height:100%; margin:0; padding:0; border:none;"></iframe>
+                                                    </div>
+                                                    
+                                                    <div id="modal-hematraxguide" class="reveal-modal xx-large" data-reveal="">
+														<div class="close-reveal-modal icon">&#xf217;</div>
+                                                        <iframe src="http://digi-trax.com/pdf/HemaTrax-CT-Guide.pdf" style="overflow:scroll; width:100%; height:100%; margin:0; padding:0; border:none;"></iframe>
+                                                        
+                                                    </div>
+        											</div><!--main-->
+                                                 <p class="footer"><a data-reveal-id="modal-manuals" href="http://digi-trax.com/manuals.htm" target="_blank" title="HEMATRAX Server &amp; Client MANUALS"><span><span class="fi-page-pdf icon"></span>HEMATRAX Server &amp; Client MANUALS</span></a><a data-reveal-id="modal-specialoffer" href="http://digi-trax.com/softsupp.htm" target="_blank" title="Software videos"><span class="fi-video icon"></span><span>Unlimited support</span></a><a data-reveal-id="modal-sofrwarealert" href="http://digi-trax.com/SoftwareAlert.htm" target="_blank" title="Most Recent Software Alerts"><span class="fi-alert"></span> Software alerts</a><a data-reveal-id="modal-lss" href="http://download.digi-trax.com" target="_blank" title="Download our LSS"><span class="fi-download icon"></span><span>Lifecycle Software Support (LSS)</span></a><a data-reveal-id="modal-hematraxguide" href="http://digi-trax.com/pdf/HemaTrax-CT-Guide.pdf" target="_blank" title="HemaTrax Cellular Therapy Troubleshooting Guide"><span class="fi-download icon"></span><span>HemaTrax Cellular Therapy Troubleshooting Guide</span></a></p>  
+                                            </div> <!--content--> 
                                         </div><!--end inner tab content-->
                                     </div><!--outer tab content-->
-                                    <div class="content" id="panel3a"> <p>Panel 3 content goes here.</p> </div><!--outer tab content-->
-                                    <div class="content"  id="panel4a"> <p>Panel 4 content goes here.</p> </div><!--outer tab content-->
-                                    <div class="content" id="panel5a"> <p>Panel 5 content goes here.</p> </div><!--outer tab content-->
-                                    <div class="content" id="panel6a"> <p>Panel 6 content goes here.</p> </div><!--outer tab content-->
+                                    <!--<div class="content" id="panel3a"> <p>Panel 3 content goes here.</p> </div>--><!--outer tab content-->
+                                    <div class="content"  id="panel4a">
+                                    	<h4>2014 Trade shows</h4>
+                                        <table class="tradeshows">
+                                        	<thead>
+                                        		<tr>
+                                            		<th valign="top">DATE</th>
+                                                    <th valign="top">INFORMATION</th>
+                                                    <th valign="top">PLACE</th>
+                                                    <th valign="top">OTHER DETAILS</th>
+                                            	</tr>	
+                                            </thead>
+                                        	<tr>
+                                            	<td valign="top">June 5 - 7
+                                                </td>
+                                                <td valign="top"><a href="http://cordbloodsymposium.org/index.php" title="Cord Blood Symposium" target="_blank">Cord Blood Symposium</a><span class="sub">Sub-title text</span>
+                                                </td>
+                                                <td valign="top">San Francisco, California
+                                                </td>
+                                                <td valign="top">Come visit us @ booth 123
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                            	<td valign="top">June 5 - 7
+                                                </td>
+                                                <td valign="top"><a href="http://cordbloodsymposium.org/index.php" title="Cord Blood Symposium" target="_blank">Cord Blood Symposium</a><span class="sub">Sub-title text</span>
+                                                </td>
+                                                <td valign="top">San Francisco, California
+                                                </td>
+                                                <td valign="top">Come visit us @ booth 123
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                            	<td valign="top">June 5 - 7
+                                                </td>
+                                                <td valign="top"><a href="http://cordbloodsymposium.org/index.php" title="Cord Blood Symposium" target="_blank">Cord Blood Symposium</a><span class="sub">Sub-title text</span>
+                                                </td>
+                                                <td valign="top">San Francisco, California
+                                                </td>
+                                                <td valign="top">Come visit us @ booth 123
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                            	<td valign="top">June 5 - 7
+                                                </td>
+                                                <td valign="top"><a href="http://cordbloodsymposium.org/index.php" title="Cord Blood Symposium" target="_blank">Cord Blood Symposium</a><span class="sub">Sub-title text</span>
+                                                </td>
+                                                <td valign="top">San Francisco, California
+                                                </td>
+                                                <td valign="top">Come visit us @ booth 123
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div><!--outer tab content-->
+                                    <!--<div class="content" id="panel5a"> <p>Panel 5 content goes here.</p> </div>--><!--outer tab content-->
+                                    <div class="content" id="panel6a">
+                                    	<div class="main">
+                                        	<!--<h4>Frequently asked questions</h4>-->
+                                            <ul class="faq">
+                                            	<li><a class="button red" href="#" target="_blank"><span class="fi-lightbulb icon"></span><span class="info">Category question</span></a></li>
+                                                <li><a class="button red" href="#" target="_blank"><span class="fi-lightbulb icon"></span><span class="info">Category question, such as a very long question category</span></a></li>
+                                                <li><a class="button red" href="#" target="_blank"><span class="fi-lightbulb icon"></span><span class="info">Category question</span></a></li>
+                                                <li><a class="button red" href="#" target="_blank"><span class="fi-lightbulb icon"></span><span class="info">Category question</span></a></li>
+                                                <li><a class="button red" href="#" target="_blank"><span class="fi-lightbulb icon"></span><span class="info">Category question</span></a></li>
+                                                <li><a class="button red" href="#" target="_blank"><span class="fi-lightbulb icon"></span><span class="info">Category question</span></a></li>
+                                                <li><a class="button red" href="#" target="_blank"><span class="fi-lightbulb icon"></span><span class="info">Category question</span></a></li>
+											</ul>
+                                        </div><!--main-->
+                                    </div><!--outer tab content-->
 								</div>
+                                <div class="clearfix"></div>
                             </div>
                         </article>
                     </li>
@@ -253,7 +496,7 @@
                                 <div class="clearfix"></div>
                             </div>
                             <footer>
-								<p class="category"><a href="#" title="Category Blood Bank"><span class="fi-folder icon"> Blood Bank</span></a><span class="tags"><a href="#" title="Tag"><span class="fi-price-tag icon"></span> Printer</a><a href="#" title="Tag"><span class="fi-price-tag icon"></span> Zebra</a><a href="#" title="Tag"><span class="fi-price-tag icon"></span> zm400</a></span></p>
+								<p class="category"><a href="#" title="Category Blood Bank"><span class="fi-folder icon"></span> Blood Bank</a><span class="tags"><a href="#" title="Tag"><span class="fi-price-tag icon"></span> Printer</a><a href="#" title="Tag"><span class="fi-price-tag icon"></span> Zebra</a><a href="#" title="Tag"><span class="fi-price-tag icon"></span> zm400</a></span></p>
 								
                             </footer>
                         </article>
@@ -286,7 +529,7 @@
                             </div>
                             <div class="clearfix"></div>
                             <footer>
-								<p class="category"><a href="#" title="Category Blood Bank"><span class="fi-folder icon"> Blood Bank</span></a><span class="tags"><a href="#" title="Tag"><span class="fi-price-tag icon"></span> Printer</a><a href="#" title="Tag"><span class="fi-price-tag icon"></span> Zebra</a><a href="#" title="Tag"><span class="fi-price-tag icon"></span> zm400</a></span></p>
+								<p class="category"><a href="#" title="Category Blood Bank"><span class="fi-folder icon"></span> Blood Bank</a><span class="tags"><a href="#" title="Tag"><span class="fi-price-tag icon"></span> Printer</a><a href="#" title="Tag"><span class="fi-price-tag icon"></span> Zebra</a><a href="#" title="Tag"><span class="fi-price-tag icon"></span> zm400</a></span></p>
 								
                             </footer>
                         </article>
@@ -319,7 +562,7 @@
                             </div>
                             <div class="clearfix"></div>
                             <footer>
-								<p class="category"><a href="#" title="Category Blood Bank"><span class="fi-folder icon"> Blood Bank</span></a><span class="tags"><a href="#" title="Tag"><span class="fi-price-tag icon"></span> Printer</a><a href="#" title="Tag"><span class="fi-price-tag icon"></span> Zebra</a><a href="#" title="Tag"><span class="fi-price-tag icon"></span> zm400</a></span></p>
+								<p class="category"><a href="#" title="Category Blood Bank"><span class="fi-folder icon"></span> Blood Bank</a><span class="tags"><a href="#" title="Tag"><span class="fi-price-tag icon"></span> Printer</a><a href="#" title="Tag"><span class="fi-price-tag icon"></span> Zebra</a><a href="#" title="Tag"><span class="fi-price-tag icon"></span> zm400</a></span></p>
 								
                             </footer>
                         </article>
@@ -352,7 +595,7 @@
                             </div>
                             <div class="clearfix"></div>
                             <footer>
-								<p class="category"><a href="#" title="Category Blood Bank"><span class="fi-folder icon"> Blood Bank</span></a><span class="tags"><a href="#" title="Tag"><span class="fi-price-tag icon"></span> Printer</a><a href="#" title="Tag"><span class="fi-price-tag icon"></span> Zebra</a><a href="#" title="Tag"><span class="fi-price-tag icon"></span> zm400</a></span></p>
+								<p class="category"><a href="#" title="Category Blood Bank"><span class="fi-folder icon"></span> Blood Bank</a><span class="tags"><a href="#" title="Tag"><span class="fi-price-tag icon"></span> Printer</a><a href="#" title="Tag"><span class="fi-price-tag icon"></span> Zebra</a><a href="#" title="Tag"><span class="fi-price-tag icon"></span> zm400</a></span></p>
 								
                             </footer>
                         </article>
@@ -405,7 +648,7 @@
             <span class="clearfix"></span>
         </ul>
 	</nav>
-  
+  <div class="clearfix"></div>
     </section>
     
     	<div class="quicklinks">
@@ -467,7 +710,7 @@
 				//"js/foundation/foundation.magellan-ck.js",
 				//"js/foundation/foundation.offcanvas-ck.js",
 				"js/foundation/foundation.orbit-ck.js",
-				//"js/foundation/foundation.reveal-ck.js",
+				"js/foundation/foundation.reveal-ck.js",
 				"js/foundation/foundation.tab-ck.js",
 				//"js/foundation/foundation.tooltip-ck.js",
 				//"js/foundation/foundation.topbar-ck.js",

@@ -71,6 +71,7 @@ Fixings
 Variables
 -----------------------------------
 */
+.icon{font-family:'foundation-icons';}
 
 .fontlight{font-family: 'font_light';}
 .fontregular{font-family: 'font_regular';}
@@ -348,8 +349,17 @@ Arrow sprites
 	img{width:80px;max-width:80px;}
 	}
 
-
-
+/*
+general button
+*/
+.button{line-height:1em;font-size:1em;margin:10px 0;display:inline-block;
+	.icon{padding:10px 12px;background-color:$lightgrey;}
+	.info{padding:8px 10px;margin:0 10px 0 2px;background-color:$lightgrey;}
+}
+.button.red{
+	.icon{background-color:lighten($lightred, 15%);color:$darkred;}
+	.info{background-color:lighten($lightred, 15%);color:$darkred;}
+}
 
 
 

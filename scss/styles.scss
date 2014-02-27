@@ -60,7 +60,11 @@ header{background:lighten($lightergrey, 5%);overflow:hidden;color:$lighterblue;
 				img{float:left;}
 			}
 		}
-		li:nth-child(5){background:lighten($lightergrey, 5%);}
+		li:nth-child(5){background:$red;padding:0;margin-top:-60px;
+			&.pull{margin-top:-20px;}
+			a{color:$yellow;margin:20px 0 0 50px;
+				}
+			}
 		li:last-child, li:first-child{
 			a{color:$yellow;}
 		}
@@ -77,6 +81,7 @@ header{background:lighten($lightergrey, 5%);overflow:hidden;color:$lighterblue;
 	    margin-right:22px;
 	  }
 	}
+
 /* 
 ------
 Header Menu content 
@@ -172,7 +177,7 @@ Slide
 			a{color:$blue;padding:10px;background:$lighterblue url(../img/backgrounds/btn-tags.png) no-repeat right bottom;}
 		}
 		.tags{
-			a{color:$darkyellow;padding:10px;background:$lightyellow url(../img/backgrounds/btn-tags.png) no-repeat right bottom;margin:0 0 0 10px;}
+			a{color:darken($darkyellow, 10%);padding:10px;background:$lightyellow url(../img/backgrounds/btn-tags.png) no-repeat right bottom;margin:0 0 0 10px;}
 			}
 	}
 }
@@ -251,11 +256,9 @@ footer.bottom{background:$green;color:$darkgreen;position:absolute;bottom:0;left
 Technical support
 ------
 */
-////////////
-.orbit-container{display:none;}
-.header-drop li.third{display:block;}
-/////////////
+
 .support{
+	h4, h5, h6{font-size:1.2em;} 
 	article{background:#fff;min-height:450px;border:1px solid $lightgrey;//max-height450!!!
 		header{background:#fff;border-bottom:1px solid $lightgrey;padding:0.8125em;}
 		.main{
@@ -283,18 +286,23 @@ Technical support
 			.content{width:100%;}
 			
 			dl.inner{width:100%;
-				dd{
-					a{width:120px;height:40px;margin-left: 5px;padding:10px 0 0 20px;background:$lightyellow url(../img/backgrounds/btn-tabs.png) no-repeat left bottom;color:darken($darkyellow, 10%);}
+			dd{width:25%;display:inline-block;
+					a{width:99%;height:auto;min-height:50px;margin-left: 1%;padding:5px 0 5px 20px;background:$lightyellow url(../img/backgrounds/btn-tabs.png) no-repeat left bottom;color:darken($darkyellow, 10%);}
 				&.active{
-					a{background:$yellow;}
+					a{background:$yellow;cursor:auto;}
 					}
 				}
 				
 			}
+			ul.faq{
+				li{width:90%;margin:0 5%;
+					.button{display:block;margin:25px 0 0 0;}
+					}
+			}
 			.content{position:relative;height:340px;
 			
 				.main{margin:0 20px;
-					h4, h5{}
+					h4, h5{color:$grey;}
 					.body{
 						//partnership
 						
@@ -315,21 +323,120 @@ Technical support
 						}//ul
 						ul:last-child{
 							li:last-child{
-								a{color:darken($darkred, 10%);}
-							span{background:$lightred;}
+								a{color:$darkred;}
+							span{background:lighten($lightred, 20%);}
 							}
 						}
 					}
 				}
 				.footer{position:absolute;bottom:10px;
 					a{color:darken($darkyellow, 10%);padding:10px;background:$lightyellow;margin:0 5px 0 0;
-						.icon{margin:0 10px 0 5px;font-size:1.5em;}
+						.icon{margin:0 10px 0 5px;font-size:1em;}
 						}
 						
 				}
-			}//content
-		}//main 
-	}
+			}
+		}//main
+	}//content
 }
+.support article .ware{
+	.contact-details{background-color:lighten($lightergrey, 5%);width:90%;padding:8px 1%;margin:0 0 3px 0;
+		h4{margin:0 0 5px 0;
+			a{color:lighten($grey, 30%);margin:0 0 5px 0;}
+		}
+		h5{font-size:0.85em;margin:0 0 5px 0;}
+	}
+		.footer a:nth-child(4){clear:both;display:inline-block;margin-top:15px;margin-bottom:-10px;}
+}
+.support article .main .content.contact_information{height:389px;position:relative;
+	.column{margin:0 0 1% 0;float:left;
+		h4{padding:0 0 15px 0;font-size:1em;}
+		h5{padding:0;font-size:1em;@extend .fontbold;}
+		p{
+			 a{color:$blue;background:lighten($lighterblue, 10%);font-size:0.85em;@extend .typeregular;}
+			}
+		}
+	.column:nth-child(1){width:28.45555%;
+		.vcard{background:$lightergrey;margin:5px 0 0 0;padding:25px 10px;color:$grey;font-size:0.85em;
+			a{color:$grey;}
+			.url, .email{padding:5px;}
+			.adr{padding:10px 0 0 0;}
+			.url, .email, .street-address, .locality, .country-name, .tel{display:block;padding:2px 0;}
+			}
+		}
+	.column:nth-child(2){width:71.45555%;
+		.manager{float:left;width:48.9999%;margin:5px 1% 0 0;padding:5px;background:lighten($lighterblue, 10%);}
+		}
+		.footer{position:absolute;bottom:10px;
+					a{color:darken($darkyellow, 10%);padding:10px;background:$lightyellow;margin:0 5px 0 0;
+						.icon{margin:0 10px 0 5px;font-size:1em;}
+						}
+				}
+		.footer a:nth-child(4){clear:both;display:inline-block;margin-top:15px;margin-bottom:-10px;}
+		
+}
+
+.reveal-modal{background:$lightergrey;top:25px;bottom:25px;color:$darkgreen;padding:0;
+	h1, h2, h3, h4, h5, h6{font-size:1.2em;line-height:1.2em;margin:20px 0;}
+	.icon{padding:10px 12px;color:$red;background:lighten($lightred, 15%);}
+	
+}
+
+/*
+Query form
+*/
+form{width:96%;}
+fieldset{background:lighten($lighterblue,10%);border:1px solid $lighterblue;float:left;width:48%;margin:0 0.9999%;min-height:230px;}
+label{cursor:pointer;}
+textarea{min-height:120px;}
+/*Form checkboxes etc.. custom styling*/
+input, select, textarea {
+	@extend .typeregular;
+    margin:0;
+    padding:0;
+    font-size:0.85em /* this is optional, I like the fonts a little smaller */;
+    outline:none;
+    font-family:inherit; box-sizing:border-box /* make sure you use the other vendor prefixes */;}
+	//radio + checkbox hide
+	input[type="radio"],
+	input[type="checkbox"] {
+		display: none;
+	}
+	input[type="radio"] + label{
+		&:before{
+		border-radius:16px;
+		content:"";
+        display: inline-block;  
+        width: 32px;  
+        height: 32px;  
+        margin:10px 10px -10px 0;   
+        background:lighten($blue, 30%); 
+		} 
+	}
+	
+	input[type="radio"]:checked + label:before{background-color:$blue;background-image: url('img/pictos/check.png');content:""; 
+		span{display:inline-block;}
+		}
+	input[type="text"], input[type="email"], input[type="tel"], textarea{background:lighten($lighterblue, 15%);border:none;padding:10px;margin:5px 0;width:70%;float:right;clear:right;}
+	fieldset:nth-child(2) label, fieldset:nth-child(4) label{float:left;clear:left;margin:15px 0;}
+	fieldset:nth-child(1) label, fieldset:nth-child(3) label{width:100%;float:left;clear:left;margin-bottom:5px;padding-bottom:5px;}
+	input[type="submit"]{background:lighten($lighterblue,10%);border:1px solid $lighterblue;float:right;margin:10px 0.9999% 0 0;padding:15px;}
+/*End custom checkboxes*/
+
+/*
+///
+Table
+///
+*/
+table.tradeshows{padding:15px 5px;margin:10px 0;font-size:0.9em;width:100%;
+	a{color:darken($blue, 15%);@extend .typeitalic;}
+	th{width:26.9998%;padding:0;color:lighten($blue,10%);padding:10px 0.4998%;}
+	th:first-child {width:14%;padding:10px 0.4998% 10px 2%}
+	td{width:26.9998%;background:lighten($lighterblue,10%);padding:10px 0.4998%;@extend .typeregular;
+		span{display:block;color:lighten($blue, 20%);font-size:0.75em;}
+		}
+	td:first-child {color:$red;width:14%;padding:10px 0.4998% 10px 2%;}
+	}	
+	
 	
 	
