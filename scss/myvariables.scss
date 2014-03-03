@@ -352,15 +352,26 @@ Arrow sprites
 /*
 general button
 */
-.button{line-height:1em;font-size:1em;margin:10px 0;display:inline-block;
-	.icon{padding:10px 12px;background-color:$lightgrey;}
-	.info{padding:8px 10px;margin:0 10px 0 2px;background-color:$lightgrey;}
+.button{line-height:1em;font-size:1em;margin:1px 0;display:inline-block;cursor:pointer;
+	.icon{padding:8px 12px 12px 12px;background-color:$lightgrey;color:$grey;width:40px;display:inline-block;text-align:center;font-size:22px;line-height:16px;}
+	.info{padding:8px 10px;margin:0 10px 0 2px;background-color:$lightgrey;color:$grey;display:inline-block;}
 }
 .button.red{
 	.icon{background-color:lighten($lightred, 15%);color:$darkred;}
 	.info{background-color:lighten($lightred, 15%);color:$darkred;}
 }
-
+.button.green{
+	.icon{background-color:lighten($lightgreen, 15%);color:$darkgreen;}
+	.info{background-color:lighten($lightgreen, 15%);color:$darkgreen;}
+}
+.button.blue{
+	.icon{background-color:lighten($lightblue, 15%);color:$darkblue;}
+	.info{background-color:lighten($lightblue, 15%);color:$darkblue;}
+}
+.button.yellow{
+	.icon{background-color:$lightyellow;color:darken($darkyellow, 10%);}
+	.info{background-color:$lightyellow;color:darken($darkyellow, 10%);}
+}
 
 
 
