@@ -34,9 +34,7 @@ PAGE
 	//footer
 	footer.bottom{background:$green;color:$darkgreen;position:absolute;bottom:0;left:0;right:0;height:60px;z-index: 100;padding:0;margin:0;
 		.shortcuts-page{cursor:pointer;background:$lightgreen;display:block;padding:10px 30px;margin:10px auto 0 auto;width:100px;
-			.buttons{display:inline-block;height:20px;
-				.btn{}
-				}
+			.buttons{display:inline-block;height:20px;}
 		}
 		
 	}//footer

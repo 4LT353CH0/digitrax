@@ -1,0 +1,16 @@
+@charset "UTF-8";
+/*
+-----------------------------------
+MEDIAQUERY
+-----------------------------------
+*/
+.support article .main, .support article{display:block;height:auto;}
+@media screen and (max-width:1023px){
+	#wrap{min-width:768px;}
+	.tabs-content.vertical{width:70%;}
+	//support
+	.support article .main .content{height:auto;overflow:scroll;}
+	.support article .main .content .footer{bottom:-30px;}
+	.support article .main .content .footer a{margin-top:7px;}
+	.support article .main .content .main .body ul{width:100%;}
+}

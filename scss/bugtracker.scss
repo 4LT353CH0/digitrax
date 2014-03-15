@@ -1,0 +1,16 @@
+@charset "UTF-8";
+/*
+-----------------------------------
+BUG TRACKER
+-----------------------------------
+*/
+.button .icon{font-size:1em;}
+.tabs-content.vertical{height:auto;}
+.main {margin: 10px 10px 0 10px;}
+.support article .main .content{height:auto;overflow:scroll;}
+.support article .main .content .main{min-height:340px;}
+.support article .main .content .main .body ul{}
+.support article .main .content .footer{bottom:0;} 
+@media screen and (max-width:768px){
+	
+}

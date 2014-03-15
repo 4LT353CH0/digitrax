@@ -326,14 +326,7 @@ Arrow sprites
 .arrow-light-red{overflow:hidden;float:left;
 	.left-arrow{margin:-655px 0 0 -60px;}
 	}
-	
-/*
-<a class="readmore" href="#" title="Read more about the product the Zebra">
-	<span class="text">Read more about the | Product Zebra BB-ZM400</span>
-	<span class="arrow arrow-red horizontal"><img class="right-arrow" src="img/pictos/arrow_btns.png" alt="Read more about the | Product Zebra BB-ZM400"></span>
-<a>
-*/		
-	
+
 .orbit-container .orbit-slides-container{
 .vertical{height:20px;width:40px;
 	img{width:80px;max-width:80px;}
@@ -350,10 +343,10 @@ Arrow sprites
 	}
 
 /*
-general button
+general @
 */
 .button{line-height:1em;font-size:1em;margin:1px 0;display:inline-block;cursor:pointer;
-	.icon{padding:8px 12px 12px 12px;background-color:$lightgrey;color:$grey;width:40px;display:inline-block;text-align:center;font-size:22px;line-height:16px;}
+	.icon{padding:8px 10px 8px 10px;background-color:$lightgrey;color:$grey;width:40px;display:inline-block;text-align:center;font-size:22px;line-height:16px;}
 	.info{padding:8px 10px;margin:0 10px 0 2px;background-color:$lightgrey;color:$grey;display:inline-block;}
 }
 .button.red{
@@ -372,8 +365,6 @@ general button
 	.icon{background-color:$lightyellow;color:darken($darkyellow, 10%);}
 	.info{background-color:$lightyellow;color:darken($darkyellow, 10%);}
 }
-
-
 
 
 

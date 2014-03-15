@@ -1,0 +1,15 @@
+@charset "UTF-8";
+/*
+-----------------------------------
+SINGLE PRODUCT
+-----------------------------------
+*/
+.products.single{
+	.description{padding:0;margin:0 4.9998%;}
+	article{
+	h2, h3, h4{font-size:1.2em;}
+	h5, h6{font-size:1.4em;line-height:1em;}
+	p, ul{font-size:1em;line-height:1.2em;margin:0 0 15px 0;}
+	}
+}
+
